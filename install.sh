@@ -1,7 +1,10 @@
 #!/bin/bash
 
 # Create a directory for dotfiles if it doesn't exist
-mkdir -p ~/.dotfiles
+mkdir -p ~/dotfiles
+
+# Install oh-my-bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 
 # Create symlinks for configuration files
 ln -sf ~/dotfiles/config/bash/.bashrc ~/.bashrc

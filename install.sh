@@ -35,12 +35,6 @@ if [ "$FISH_INSTALLED" = "no" ]; then
     fi
 fi
 
-# 2. Set Fish as the default shell
-if [ -z "$SHELL" ] || [ "$SHELL" != "/usr/local/bin/fish" ]; then
-    echo "Setting Fish as default shell..."
-    sudo chsh -s /usr/local/bin/fish $USER
-fi
-
 # 3. Install Oh My Fish if not already installed
 if [ ! -d "$HOME/.config/fish" ] || [ ! -f "$HOME/.config/fish/oh-my-fish" ]; then
     echo "Installing Oh My Fish..."
